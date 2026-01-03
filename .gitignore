@@ -1,0 +1,33 @@
+# Dependencies
+/vendor
+/node_modules
+
+# IDE and Editors
+/.idea
+/.vscode
+/.vagrant
+
+# Testing
+/.phpunit.result.cache
+/.phpunit.cache
+/coverage
+/coverage.xml
+phpunit.xml
+
+# Build artifacts
+/build
+
+# Environment files
+.env
+.env.backup
+.env.local
+.env.*.local
+
+# System files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Lock file (not needed for packages)
+composer.lock

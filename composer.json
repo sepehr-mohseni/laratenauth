@@ -1,0 +1,76 @@
+{
+    "name": "sepehr-mohseni/laratenauth",
+    "description": "Laravel multi-tenant authentication manager with support for multiple authentication drivers, tenant isolation, and seamless tenant switching",
+    "keywords": [
+        "laravel",
+        "multi-tenant",
+        "authentication",
+        "saas",
+        "tenant",
+        "sanctum",
+        "jwt",
+        "guards",
+        "laratenauth"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sepehr Mohseni",
+            "email": "isepehrmohseni@gmail.com",
+            "homepage": "https://github.com/sepehr-mohseni"
+        }
+    ],
+    "require": {
+        "php": "^8.1|^8.2|^8.3",
+        "illuminate/auth": "^10.0|^11.0|^12.0",
+        "illuminate/cache": "^10.0|^11.0|^12.0",
+        "illuminate/config": "^10.0|^11.0|^12.0",
+        "illuminate/database": "^10.0|^11.0|^12.0",
+        "illuminate/http": "^10.0|^11.0|^12.0",
+        "illuminate/routing": "^10.0|^11.0|^12.0",
+        "illuminate/support": "^10.0|^11.0|^12.0"
+    },
+    "require-dev": {
+        "laravel/sanctum": "^3.0|^4.0",
+        "mockery/mockery": "^1.5",
+        "orchestra/testbench": "^8.0|^9.0",
+        "phpunit/phpunit": "^10.0|^11.0",
+        "laravel/pint": "^1.0",
+        "phpstan/phpstan": "^1.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sepehr_Mohseni\\LaraTenAuth\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sepehr_Mohseni\\LaraTenAuth\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "format": "vendor/bin/pint",
+        "analyse": "vendor/bin/phpstan analyse"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sepehr_Mohseni\\LaraTenAuth\\LaraTenAuthServiceProvider"
+            ],
+            "aliases": {
+                "TenantAuth": "Sepehr_Mohseni\\LaraTenAuth\\Facades\\TenantAuth"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
