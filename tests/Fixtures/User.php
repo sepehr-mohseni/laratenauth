@@ -10,6 +10,12 @@ use Illuminate\Foundation\Auth\User as AuthUser;
 use Sepehr_Mohseni\LaraTenAuth\Traits\HasTenants;
 use Sepehr_Mohseni\LaraTenAuth\Traits\HasTenantTokens;
 
+/**
+ * @property int $id
+ * @property string $name
+ * @property string $email
+ * @property string $password
+ */
 class User extends AuthUser implements Authenticatable
 {
     use HasTenants;

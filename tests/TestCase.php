@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Sepehr_Mohseni\LaraTenAuth\Tests;
 
+use Illuminate\Foundation\Testing\Concerns\InteractsWithAuthentication;
+use Illuminate\Foundation\Testing\Concerns\MakesHttpRequests;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 use Sepehr_Mohseni\LaraTenAuth\LaraTenAuthServiceProvider;
@@ -11,6 +13,8 @@ use Sepehr_Mohseni\LaraTenAuth\LaraTenAuthServiceProvider;
 abstract class TestCase extends OrchestraTestCase
 {
     use RefreshDatabase;
+    use InteractsWithAuthentication;
+    use MakesHttpRequests;
 
     /**
      * Setup the test environment.

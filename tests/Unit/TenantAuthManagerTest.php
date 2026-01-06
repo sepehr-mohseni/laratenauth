@@ -148,8 +148,12 @@ class TenantAuthManagerTest extends TestCase
         $this->authManager->impersonate($user2);
 
         $this->assertTrue($this->authManager->isImpersonating());
-        $this->assertEquals($user2->id, $this->authManager->user()->id);
-        $this->assertEquals($user1->id, $this->authManager->getOriginalUser()->id);
+        /** @var \Sepehr_Mohseni\LaraTenAuth\Tests\Fixtures\User $currentUser */
+        $currentUser = $this->authManager->user();
+        /** @var \Sepehr_Mohseni\LaraTenAuth\Tests\Fixtures\User $originalUser */
+        $originalUser = $this->authManager->getOriginalUser();
+        $this->assertEquals($user2->id, $currentUser->id);
+        $this->assertEquals($user1->id, $originalUser->id);
     }
 
     public function test_stop_impersonating(): void
