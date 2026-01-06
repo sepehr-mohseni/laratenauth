@@ -1,7 +1,7 @@
 # LaraTenAuth
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/sepehr-mohseni/laratenauth.svg?style=flat-square)](https://packagist.org/packages/sepehr-mohseni/laratenauth)
-[![Tests](https://img.shields.io/github/actions/workflow/status/sepehr-mohseni/laratenauth/tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/sepehr-mohseni/laratenauth/actions/workflows/tests.yml)
+[![Tests](https://img.shields.io/github/actions/workflow/status/sepehr-mohseni/laratenauth/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/sepehr-mohseni/laratenauth/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/sepehr-mohseni/laratenauth.svg?style=flat-square)](https://packagist.org/packages/sepehr-mohseni/laratenauth)
 [![License](https://img.shields.io/packagist/l/sepehr-mohseni/laratenauth.svg?style=flat-square)](https://packagist.org/packages/sepehr-mohseni/laratenauth)
 
